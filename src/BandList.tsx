@@ -1,4 +1,4 @@
-import { Band } from './BandForm'; // Importing Band type from BandForm
+import { Band } from './Concert'; // Importing Band type from BandForm
 import styles from './BandList.module.css';
 
 export interface BandListProps {
@@ -6,7 +6,7 @@ export interface BandListProps {
   setBandIndex: (index: number) => void;
 }
 
-function BandList({ bands, setBandIndex }: BandListProps) {
+export function BandList({ bands, setBandIndex }: BandListProps) {
   return (
     <nav className={styles.BandList}>
       <h3>Upcoming shows</h3>
@@ -18,5 +18,3 @@ function BandList({ bands, setBandIndex }: BandListProps) {
     </nav>
   );
 }
-
-export default BandList;

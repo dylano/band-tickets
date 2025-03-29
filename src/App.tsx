@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import BandForm from './BandForm';
-import BandList from './BandList';
+import { Concert } from './Concert';
+import { BandList } from './BandList';
 import skaBand from './band-json/ska-band.json';
 import kpopBand from './band-json/kpop-band.json';
 import punkBand from './band-json/punk-band.json';
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <BandList bands={bands} setBandIndex={setBandIndex} />
-      <BandForm band={bands[bandIndex]} />
+      <Concert band={bands[bandIndex]} />
     </div>
   );
 }
