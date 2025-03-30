@@ -107,6 +107,7 @@ export function TicketForm({ tickets }: { tickets: Ticket[] }) {
   async function formSubmit(data: TicketOrder) {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log('Form submitted:', data);
+    alert(`Enjoy the show, ${data.firstName}!\n\n\n${JSON.stringify(data)}`);
     initializeForm();
   }
 
