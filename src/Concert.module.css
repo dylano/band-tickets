@@ -1,15 +1,24 @@
-.BandForm {
-  margin: 3rem;
+.concert {
+  max-width: 1000px;
+  margin: 3rem auto;
   color: var(--contentColor);
 
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
     margin: 0;
   }
+}
+
+html {
+  --mobr: 768px;
 }
 
 .heading {
   h1 {
     color: black;
+  }
+
+  @media (max-width: 767px) {
+    margin: 1rem;
   }
 }
 
@@ -22,10 +31,10 @@
 
 .content {
   display: grid;
-  grid-template-columns: 30vw 1fr;
+  grid-template-columns: clamp(200px, 30vw, 400px) 1fr;
   gap: 2rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -36,5 +45,9 @@
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 5px;
+  }
+
+  @media (max-width: 767px) {
+    margin: 1rem;
   }
 }

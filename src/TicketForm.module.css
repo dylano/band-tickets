@@ -12,6 +12,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   input {
@@ -21,6 +25,10 @@
 
   .wideInput {
     grid-column: 1 / 3;
+
+    @media (max-width: 767px) {
+      grid-column: 1;
+    }
   }
 
   button {

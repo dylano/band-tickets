@@ -25,7 +25,7 @@ export function Concert({ band }: { band: Band }) {
   const showDate = dayjs(band.date).format('dddd, MMMM D');
 
   return (
-    <div className={styles.BandForm}>
+    <div className={styles.concert}>
       <div className={styles.heading}>
         <h1>{band.name}</h1>
         <p className={styles.showInfo}>
