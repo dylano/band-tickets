@@ -1,6 +1,10 @@
 .BandForm {
   margin: 3rem;
   color: var(--contentColor);
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 }
 
 .heading {
@@ -32,15 +36,5 @@
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 5px;
-  }
-}
-
-.ticketForm {
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 1rem 2rem;
-
-  h2 {
-    color: black;
   }
 }

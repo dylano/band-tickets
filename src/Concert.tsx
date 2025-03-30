@@ -1,6 +1,7 @@
 import DOMPurify from 'dompurify';
 import dayjs from 'dayjs';
 import styles from './Concert.module.css';
+import { TicketForm } from './TicketForm';
 
 export interface Ticket {
   type: string;
@@ -17,22 +18,6 @@ export interface Band {
   description_blurb: string;
   imgUrl: string;
   ticketTypes: Ticket[];
-}
-
-function TicketForm({ tickets }: { tickets: Ticket[] }) {
-  return (
-    <div className={styles.ticketForm}>
-      <form>
-        <h2>Select Tickets</h2>
-        {tickets.map((ticket) => (
-          <div>
-            {ticket.name} - {ticket.description}
-          </div>
-        ))}
-        <button type="submit">Get Tickets</button>
-      </form>
-    </div>
-  );
 }
 
 export function Concert({ band }: { band: Band }) {
